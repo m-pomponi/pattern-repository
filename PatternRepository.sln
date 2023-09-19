@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatternRepository", "Patter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericRepository", "GenericRepository\GenericRepository.csproj", "{714626F8-295E-4970-81F8-BCF9BBA0FCF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionMiddleware", "ExceptionMiddleware\ExceptionMiddleware.csproj", "{795AF43E-D865-4625-B12F-D7062C4511C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{714626F8-295E-4970-81F8-BCF9BBA0FCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{714626F8-295E-4970-81F8-BCF9BBA0FCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{714626F8-295E-4970-81F8-BCF9BBA0FCF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795AF43E-D865-4625-B12F-D7062C4511C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795AF43E-D865-4625-B12F-D7062C4511C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795AF43E-D865-4625-B12F-D7062C4511C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795AF43E-D865-4625-B12F-D7062C4511C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

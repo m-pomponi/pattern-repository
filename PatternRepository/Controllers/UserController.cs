@@ -21,6 +21,8 @@ namespace PatternRepository.Controllers
         {
             var response = await _repository.GetAllAsync();
 
+            throw new NullReferenceException("Errore non trovato");
+
             return Ok(response);
         }
 
