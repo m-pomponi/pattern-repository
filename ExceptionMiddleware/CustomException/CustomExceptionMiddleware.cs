@@ -23,19 +23,20 @@ namespace ExceptionMiddleware.CustomException
 
         public async Task InvokeAsync(HttpContext httpContext)
         {
+            //Add specific exception to handle
             try
             {
                 await _next(httpContext);
             }
-            catch (ArgumentOutOfRangeException avEx)
+            catch (ArgumentOutOfRangeException aoEx)
             {
-                _logger.Error($"A new argument exception has been thrown: {avEx}");
-                await HandleExceptionAsync(httpContext, avEx);
+                _logger.Error($"A new argument exception has been thrown: {aoEx}");
+                await HandleExceptionAsync(httpContext, aoEx);
             }
-            catch (NullReferenceException avEx)
+            catch (NullReferenceException nrEx)
             {
-                _logger.Error($"A new null reference exception has been thrown: {avEx}");
-                await HandleExceptionAsync(httpContext, avEx);
+                _logger.Error($"A new null reference exception has been thrown: {nrEx}");
+                await HandleExceptionAsync(httpContext, nrEx);
             }
             catch (Exception ex)
             {
@@ -49,6 +50,7 @@ namespace ExceptionMiddleware.CustomException
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
+            //Add exception to customize the message
             var message = exception switch
             {
                 NullReferenceException => "Null reference error from the custom middleware",
